@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Risk Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="badge">AI GOVERNANCE TOOL</p>
+      <h1>AI Risk Manager</h1>
+      <p>Assess common AI risks and get practical mitigation recommendations.</p>
+    </header>
+
+    <section class="card">
+      <h2>AI System Assessment</h2>
+      <label>Project / System Name</label>
+      <input id="name" placeholder="e.g. Customer Support AI">
+
+      <label>Does the system handle personal or sensitive data?</label>
+      <select id="privacy">
+        <option value="2">Yes</option>
+        <option value="1">Limited</option>
+        <option value="0">No</option>
+      </select>
+
+      <label>How important is security for this system?</label>
+      <select id="security">
+        <option value="2">High</option>
+        <option value="1">Medium</option>
+        <option value="0">Low</option>
+      </select>
+
+      <label>How much potential for unfair or biased outcomes?</label>
+      <select id="bias">
+        <option value="2">High</option>
+        <option value="1">Medium</option>
+        <option value="0">Low</option>
+      </select>
+
+      <label>How critical are incorrect AI decisions?</label>
+      <select id="reliability">
+        <option value="2">High</option>
+        <option value="1">Medium</option>
+        <option value="0">Low</option>
+      </select>
+
+      <button onclick="assessRisk()">Analyze Risk</button>
+    </section>
+
+    <section id="result" class="card hidden">
+      <h2>Risk Assessment</h2>
+      <div id="score" class="score"></div>
+      <div id="level" class="level"></div>
+      <div id="details"></div>
+      <h3>Recommended Actions</h3>
+      <ul id="recommendations"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
